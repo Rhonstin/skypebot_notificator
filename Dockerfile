@@ -2,7 +2,8 @@ FROM python:3.8-slim-buster
 
 # Set working directory
 WORKDIR /app
-
+# Set timezone
+ENV TZ=Europe/Kyiv
 # Install system dependencies
 RUN apt-get update && \
     apt-get install -y gcc && \
