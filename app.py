@@ -34,7 +34,7 @@ def send_to_skype(message, chat_url):
 
 # Generate message and send to Skype chat
 def generate_message(task):
-    message = f"{datetime.now().strftime('%Y-%m-%d %H:%M:%S')}\n{task['message']}"
+    message = f"{datetime.now().strftime('%Y-%m-%d %H:%M:%S') UTC}\n{task['message']}"
     send_to_skype(message, task['chat_url'])
 
 # Create task and send message to Skype chat
